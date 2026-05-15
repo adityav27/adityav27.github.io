@@ -1,141 +1,426 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Software Developer</title>
+    <title>Aditya Vishwakarma — Software Developer & Quant Enthusiast</title>
+    <meta name="description"
+        content="Portfolio of Aditya Vishwakarma — Full-Stack Developer, Quant Enthusiast, and IIT Guwahati student building mobile apps, optimization solvers, and 3D games.">
+    <meta property="og:title" content="Aditya Vishwakarma — Portfolio">
+    <meta property="og:description" content="Full-Stack Developer & Quant Enthusiast at IIT Guwahati">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
-    <nav class="navbar">
-        <div class="logo">MyPortfolio</div>
-        <div class="nav-right">
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Me</a></li>
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar" aria-label="Main navigation">
+        <div class="container">
+            <a href="#hero" class="nav-logo"><span>Aditya.</span></a>
+            <div class="nav-overlay" id="navOverlay"></div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#hobbies">Hobbies</a></li>
-                <li><a href="#contact">Contact Me</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="theme-switch" id="theme-switch">
-                <i class="fas fa-sun" title="Toggle Light/Dark Mode"></i>
+            <div style="display:flex;align-items:center;gap:8px">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i
+                        class="fas fa-moon"></i></button>
+                <button class="hamburger" id="hamburger"
+                    aria-label="Open menu"><span></span><span></span><span></span></button>
             </div>
         </div>
     </nav>
 
-    <header id="home" class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm <span class="highlight">Aditya</span></h1>
-            <h2>Software Developer & Quant Enthusiast</h2>
-            <p>I build mobile apps, full-stack platforms, optimization solvers, and 3D games.</p>
-            <div class="social-links">
-                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+    <main>
+        <!-- HERO -->
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <p class="hero-greeting">👋 Hello, I'm</p>
+                    <h1 class="hero-name"><span class="gradient-text">Aditya Vishwakarma</span></h1>
+                    <p class="hero-role">Software Developer & Quant Enthusiast</p>
+                    <p class="hero-desc">I build mobile apps, full-stack platforms, optimization solvers, and 3D games.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> View My Work</a>
+                        <a href="#" class="btn btn-outline"><i class="fas fa-download"></i> Resume</a>
+                    </div>
+                    <div class="hero-socials">
+                        <a href="https://github.com/adityav27" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/aditya-vishwakarma-023522321/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:adityav2707@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="code-window" aria-hidden="true">
+                    <div class="code-header">
+                        <div class="code-dot red"></div>
+                        <div class="code-dot yellow"></div>
+                        <div class="code-dot green"></div>
+                        <span>developer.js</span>
+                    </div>
+                    <div class="code-body" id="codeBlock">
+                        <div><span class="line-num">1</span><span class="keyword">class</span> <span
+                                class="class-name">Developer</span> <span class="bracket">{</span></div>
+                        <div><span class="line-num">2</span> <span class="keyword">constructor</span><span
+                                class="bracket">()</span> <span class="bracket">{</span></div>
+                        <div><span class="line-num">3</span> <span class="keyword">this</span>.<span
+                                class="property">name</span> <span class="punctuation">=</span> <span
+                                class="string">"Aditya Vishwakarma"</span><span class="punctuation">;</span></div>
+                        <div><span class="line-num">4</span> <span class="keyword">this</span>.<span
+                                class="property">role</span> <span class="punctuation">=</span> <span
+                                class="string">"Full-Stack Developer"</span><span class="punctuation">;</span></div>
+                        <div><span class="line-num">5</span> <span class="keyword">this</span>.<span
+                                class="property">skills</span> <span class="punctuation">=</span> <span
+                                class="bracket">[</span><span class="string">"C++"</span>, <span
+                                class="string">"Python"</span>, <span class="string">"Flutter"</span>, <span
+                                class="string">"React"</span><span class="bracket">]</span><span
+                                class="punctuation">;</span></div>
+                        <div><span class="line-num">6</span> <span class="keyword">this</span>.<span
+                                class="property">passions</span> <span class="punctuation">=</span> <span
+                                class="bracket">[</span><span class="string">"Optimization"</span>, <span
+                                class="string">"GameDev"</span>, <span class="string">"Quant"</span><span
+                                class="bracket">]</span><span class="punctuation">;</span></div>
+                        <div><span class="line-num">7</span> <span class="bracket">}</span></div>
+                        <div><span class="line-num">8</span><span class="bracket">}</span><span
+                                class="typing-cursor"></span></div>
+                    </div>
+                </div>
             </div>
-            <a href="#projects" class="btn">View My Work</a>
-        </div>
-    </header>
+        </section>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <p class="about-text">
-                I am a versatile developer with a passion for solving complex technical problems. My experience ranges from building cross-platform mobile apps using Flutter, developing high-performance C++ optimization solvers, to full-stack web development with React and Node.js. I'm constantly exploring new domains, whether it's Game Development in Godot or Quantitative Finance with WorldQuant.
-            </p>
-            <div class="skills">
-                <span class="skill-tag">Flutter / Dart</span>
-                <span class="skill-tag">C++</span>
-                <span class="skill-tag">Python / Flask</span>
-                <span class="skill-tag">React / Node.js</span>
-                <span class="skill-tag">MongoDB</span>
-                <span class="skill-tag">Godot 4</span>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="section bg-secondary">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="grid">
-                <!-- Project 1 -->
-                <div class="card">
-                    <div class="card-content">
-                        <h3>VELORA - Fleet Optimization System</h3>
-                        <p class="subtitle">React | C++ | Python/Flask | Flutter</p>
-                        <p>A full-stack VRP platform optimizing corporate vehicle routing. Built a C++ solver with ALNS metaheuristic, a React/Tailwind frontend for analytics, and a Flutter mobile app. Achieved 15-30% cost savings for multi-trip scenarios.</p>
-                        <div class="card-links">
-                            <a href="#" class="btn-small">GitHub</a>
-                            <a href="https://fkw404kkcccwg8k4gkg8wgwk.65.21.154.72.sslip.io/" target="_blank" class="btn-small outline">Live Demo</a>
+        <!-- ABOUT -->
+        <section class="section" id="about">
+            <div class="container reveal">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">A bit about who I am and what drives me.</p>
+                <div class="about-content">
+                    <p class="about-text">
+                        I'm a <strong>B.Tech Engineering Physics</strong> student at <strong>IIT Guwahati</strong>
+                        (2024–Present, CGPA: 7.0). I'm a versatile developer passionate about solving complex technical
+                        problems — from building cross-platform mobile apps in Flutter, to developing high-performance
+                        C++ optimization solvers, to full-stack web apps with React and Node.js. I'm constantly
+                        exploring new domains, whether it's Game Development in Godot, Quantitative Finance with
+                        WorldQuant, or contributing to open-source projects. I love turning ideas into polished,
+                        impactful software.
+                    </p>
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <div class="icon"><i class="fas fa-graduation-cap"></i></div>
+                            <div>
+                                <h4>Education</h4>
+                                <p>B.Tech, Engg. Physics, IIT Guwahati</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>IIT Guwahati, India</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>adityav2707@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="icon"><i class="fas fa-briefcase"></i></div>
+                            <div>
+                                <h4>Open to</h4>
+                                <p>Internships & Collaborations</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Project 2 -->
-                <div class="card">
-                    <div class="card-content">
-                        <h3>IITGCampusSync</h3>
-                        <p class="subtitle">Flutter | Node.js | MongoDB</p>
-                        <p>An all-in-one campus community app for IITG. Implemented a comprehensive tagging system (frontend UI and backend structures) allowing users to select interests, and developed onboarding screens for new users.</p>
-                        <div class="card-links">
-                            <a href="#" class="btn-small">GitHub</a>
+        <!-- SKILLS -->
+        <section class="section" id="skills">
+            <div class="container reveal">
+                <h2 class="section-title">Tech Stack</h2>
+                <p class="section-subtitle">Technologies and tools I work with.</p>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-code"></i> Languages</h3>
+                        <div class="skill-tags"><span class="skill-tag">C++</span><span
+                                class="skill-tag">Python</span><span class="skill-tag">Dart</span><span
+                                class="skill-tag">C</span><span class="skill-tag">GDScript</span><span
+                                class="skill-tag">JavaScript</span></div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-mobile-alt"></i> App & Web</h3>
+                        <div class="skill-tags"><span class="skill-tag">Flutter</span><span
+                                class="skill-tag">Node.js</span><span class="skill-tag">Express.js</span><span
+                                class="skill-tag">React</span></div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-server"></i> Backend & Infra</h3>
+                        <div class="skill-tags"><span class="skill-tag">Flask</span><span
+                                class="skill-tag">Docker</span><span class="skill-tag">Nginx</span><span
+                                class="skill-tag">Gunicorn</span></div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-database"></i> Databases</h3>
+                        <div class="skill-tags"><span class="skill-tag">MongoDB</span><span
+                                class="skill-tag">MySQL</span><span class="skill-tag">PostgreSQL</span><span
+                                class="skill-tag">Firebase</span><span class="skill-tag">Supabase</span></div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-gamepad"></i> Game Engines</h3>
+                        <div class="skill-tags"><span class="skill-tag">Godot</span><span class="skill-tag">GLSL
+                                Shaders</span></div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-tools"></i> Tools</h3>
+                        <div class="skill-tags"><span class="skill-tag">Git</span><span
+                                class="skill-tag">GitHub</span><span class="skill-tag">Postman</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section" id="projects">
+            <div class="container reveal">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Some things I've built that I'm proud of.</p>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-accent"></div>
+                        <div class="project-body">
+                            <p class="project-org">Coding Club, IIT Guwahati</p>
+                            <h3 class="project-title">IITGCampusSync — Tag System</h3>
+                            <p class="project-date">Aug 2025 – Oct 2025</p>
+                            <div class="project-tags">
+                                <span>Flutter</span><span>Dart</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>Postman</span>
+                            </div>
+                            <p class="project-desc">Engineered a dynamic Tag System for the IITGCampusSync community app
+                                — an all-in-one platform for campus communication, event management, and coordination.
+                                Designed new MongoDB schemas with many-to-many relationships and bi-directional
+                                referencing. Built scalable REST APIs using Node.js and Express.js, ensuring data
+                                consistency with MongoDB operators like <code>$pull</code> and <code>$addToSet</code>.
+                                Developed responsive Flutter UI for tag selection and 3 onboarding intro screens for new
+                                users.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/IITGCampusSync" target="_blank" rel="noopener noreferrer"><i
+                                        class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-accent"></div>
+                        <div class="project-body">
+                            <p class="project-org">Kriti 2026 — Inter Hostel Technical Competition, IIT Guwahati</p>
+                            <h3 class="project-title">VELORA — Vehicle Route Optimization</h3>
+                            <p class="project-date">Jan 2026 – Mar 2026</p>
+                            <div class="project-tags">
+                                <span>C++17</span><span>Python</span><span>Flask</span><span>React</span><span>Flutter</span><span>Supabase</span><span>Docker</span><span>Leaflet</span>
+                            </div>
+                            <p class="project-desc">Built a full-stack Vehicle Routing Problem (VRP) optimization
+                                platform solving Multi-Trip Capacitated VRP with Time Windows (MT-CVRPTW). Developed the
+                                complete Flutter mobile app with Supabase auth, cloud-synced test cases, interactive
+                                Leaflet maps, and multi-format export. Contributed to the C++17 ALNS solver with 9
+                                construction heuristics. The system achieves 15–30% cost savings with 99.5%+ constraint
+                                compliance.</p>
+                            <div class="project-links">
+                                <a href="#"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="https://fkw404kkcccwg8k4gkg8wgwk.65.21.154.72.sslip.io/" target="_blank"
+                                    rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <div class="project-accent"></div>
+                        <div class="project-body">
+                            <p class="project-org">GDAI Game Jam — GameDev & Esports Club, IIT Guwahati</p>
+                            <h3 class="project-title">Out of Sight — 3D Stealth Game</h3>
+                            <p class="project-date">Feb 2026 – Mar 2026</p>
+                            <div class="project-tags"><span>Godot
+                                    4.5</span><span>GDScript</span><span>GLSL</span><span>Jolt
+                                    Physics</span><span>Terrain3D</span></div>
+                            <p class="project-desc">Developed a 3D first-person stealth game for the "Seen / Unseen"
+                                themed game jam. Built a decoupled signal-bus architecture featuring FSM-driven enemy AI
+                                with NavigationAgent3D patrolling and RayCast3D vision cones. Wrote custom GLSL spatial
+                                shaders for an invisibility mechanic (screen-space refraction + Fresnel fringe) and a
+                                fully procedural sky system with domain-warped FBM nebulae.</p>
+                            <div class="project-links">
+                                <a href="#"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Project 3 -->
-                <div class="card">
-                    <div class="card-content">
-                        <h3>Out of Sight - 3D Stealth Game</h3>
-                        <p class="subtitle">Godot 4.5 | GDScript</p>
-                        <p>A 3D stealth action game themed "Seen / Unseen" developed for the GDAI Game Jam. Features ray-cast enemy AI, stamina/invisibility mechanics, custom shaders, and player movement systems.</p>
-                        <div class="card-links">
-                            <a href="#" class="btn-small">GitHub</a>
+        <!-- ACHIEVEMENTS -->
+        <section class="section" id="achievements">
+            <div class="container reveal">
+                <h2 class="section-title">Achievements</h2>
+                <p class="section-subtitle">Milestones and competitive accomplishments.</p>
+                <div class="achievements-list">
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+                        <div class="achievement-content">
+                            <h3>WorldQuant IQC 2025 — Stage 1 Cleared</h3>
+                            <p class="year">2025</p>
+                            <p>Led team <strong>AlphaForgers</strong> to <strong>Rank 2,262 out of 77,000+
+                                    teams</strong> worldwide (Top 2.94%). All models achieved Fitness > 1, Sharpe ratio
+                                > 1.25, and portfolio turnover under 70%. Advanced to Stage 2.</p>
                         </div>
-                 experience" class="section">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="card achievement-card">
-                <h3>WorldQuant IQC 2025 - Global Top 20%</h3>
-                <p><strong>Rank:</strong> 2,262 out of 77,000+ teams (Top 2.94%)</p>
-                <p>Led team <em>AlphaForgers</em> through Stage 1 of the International Quant Championship. Developed quantitative trading alphas achieving Fitness > 1, Sharpe ratio > 1.25, and Portolio turnover under 70%. Successfully balanced deep quantitative research and modeling with rigorous academic commitments.</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fas fa-award"></i></div>
+                        <div class="achievement-content">
+                            <h3>IAT 2024 — All India Rank 1296</h3>
+                            <p class="year">2024</p>
+                            <p>Secured AIR 1296 in the Institute Aptitude Test.</p>
+                        </div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fas fa-medal"></i></div>
+                        <div class="achievement-content">
+                            <h3>JEE Mains 2024 — 99.35 Percentile</h3>
+                            <p class="year">2024</p>
+                            <p>Scored in the top 0.65% among ~16 lakh candidates in JEE Mains 2024.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="hobbies" class="section bg-secondary">
-        <div class="container">
-            <h2 class="section-title">Hobbies</h2>
-            <p>When I'm not coding, you can find me engaging in various activities that keep me balanced and inspired. (Feel free to edit this section with your actual hobbies like Reading, Gaming, Traveling, etc.)</p>
-            <div class="skills">
-                <span class="skill-tag">Game Design</span>
-                <span class="skill-tag">Stock Market Analysis</span>
-                <span class="skill-tag">Learning new Tech</span>
+        <!-- EXPERIENCE -->
+        <section class="section" id="experience">
+            <div class="container reveal">
+                <h2 class="section-title">Experience</h2>
+                <p class="section-subtitle">Roles and positions of responsibility.</p>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>Coordinator</h3>
+                        <p class="org">Coding Club, IIT Guwahati</p>
+                        <p class="period">Jun 2025 – Apr 2026</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Game Developer</h3>
+                        <p class="org">GameDev & Esports Club, IIT Guwahati</p>
+                        <p class="period">Jun 2025 – Apr 2026</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Associate Welfare Secretary</h3>
+                        <p class="org">Umiam Hostel, IIT Guwahati</p>
+                        <p class="period">Apr 2025 – Apr 2026</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Associate Manager</h3>
+                        <p class="org">UDGAM'25, IIT Guwahati</p>
+                        <p class="period">Nov 2024 – Feb 2025</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="section">
-        <div class="container center">
-            <h2 class="section-title">Contact Me
-        </div>
-    </section>
+        <!-- EDUCATION -->
+        <section class="section" id="education">
+            <div class="container reveal">
+                <h2 class="section-title">Education</h2>
+                <p class="section-subtitle">Academic background.</p>
+                <div class="education-grid">
+                    <div class="edu-card">
+                        <div>
+                            <h3>B.Tech, Engineering Physics</h3>
+                            <p class="institute">IIT Guwahati</p>
+                        </div>
+                        <div>
+                            <p class="score">7.0 CGPA</p>
+                            <p class="year">2024 – Present</p>
+                        </div>
+                    </div>
+                    <div class="edu-card">
+                        <div>
+                            <h3>Senior Secondary (Class XII)</h3>
+                            <p class="institute">CBSE Board</p>
+                        </div>
+                        <div>
+                            <p class="score">92.2%</p>
+                            <p class="year">2023</p>
+                        </div>
+                    </div>
+                    <div class="edu-card">
+                        <div>
+                            <h3>Secondary (Class X)</h3>
+                            <p class="institute">CBSE Board</p>
+                        </div>
+                        <div>
+                            <p class="score">88.8%</p>
+                            <p class="year">2021</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="contact" class="section bg-secondary">
-        <div class="container center">
-            <h2 class="section-title">Let's Connect</h2>
-            <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
-            <a href="mailto:your.email@example.com" class="btn">Get In Touch</a>
-        </div>
-    </section>
+        <!-- CONTACT -->
+        <section class="section" id="contact">
+            <div class="container reveal">
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-subtitle">I'm always open to discussing new projects, creative ideas, or
+                    opportunities.</p>
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <p class="contact-text">Feel free to reach out! Whether it's a project collaboration, internship
+                            opportunity, or just a friendly hello — I'd love to hear from you.</p>
+                        <a href="mailto:adityav2707@gmail.com" class="contact-item"><i
+                                class="fas fa-envelope"></i><span>adityav2707@gmail.com</span></a>
+                        <a href="tel:+917067015005" class="contact-item"><i
+                                class="fas fa-phone"></i><span>+91-7067015005</span></a>
+                        <a href="https://www.linkedin.com/in/aditya-vishwakarma-023522321/" target="_blank"
+                            rel="noopener noreferrer" class="contact-item"><i
+                                class="fab fa-linkedin-in"></i><span>linkedin.com/in/aditya-vishwakarma</span></a>
+                        <a href="https://github.com/adityav27" target="_blank" rel="noopener noreferrer"
+                            class="contact-item"><i class="fab fa-github"></i><span>github.com/adityav27</span></a>
+                    </div>
+                    <form class="contact-form" id="contactForm" onsubmit="return false">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send
+                            Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <footer>
-        <p>&copy; 2026 Aditya. Built with Vanilla Web Tech.</p>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-socials">
+                <a href="https://github.com/adityav27" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/aditya-vishwakarma-023522321/" target="_blank"
+                    rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:adityav2707@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2026 Aditya Vishwakarma. Built with ❤️ and Vanilla Web Tech.</p>
+            <a href="#hero" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+        </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
